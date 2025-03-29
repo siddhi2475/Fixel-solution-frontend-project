@@ -1,0 +1,247 @@
+import React from 'react'
+const Books = [
+        {
+            id: 1,
+            title: 'To Kill a Mockingbird',
+            author: 'Harper Lee',
+            genre: 'Fiction',
+            availability: 'Available',
+            borrowCount: 15,
+            isbn: '9780446310789',
+            publisher: 'Grand Central Publishing',
+            description: 'A classic novel about racial injustice and loss of innocence in the American South.',
+            image : "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg"
+            
+        },
+        {
+            id: 2,
+            title: '1984',
+            author: 'George Orwell',
+            genre: 'Dystopian',
+            availability: 'Borrowed',
+            borrowCount: 25,
+            isbn: '9780451524935',
+            publisher: 'Signet Classic',
+            description: 'A dystopian novel that explores totalitarianism, surveillance, and individual freedom.',
+            image: "https://anylang.net/sites/default/files/covers/1984.jpg"
+        },
+        {
+            id: 3,
+            title: 'Pride and Prejudice',
+            author: 'Jane Austen',
+            genre: 'Romance',
+            availability: 'Available',
+            borrowCount: 18,
+            isbn: '9780141439518',
+            publisher: 'Penguin Classics',
+            description: 'A timeless romance novel exploring love, class, and social expectations in 19th-century England.',
+            image: "https://m.media-amazon.com/images/I/71QlyxnQrDL.jpg"
+        },
+        {
+            id: 4,
+            title: 'The Great Gatsby',
+            author: 'F. Scott Fitzgerald',
+            genre: 'Fiction',
+            availability: 'Available',
+            borrowCount: 22,
+            isbn: '9780743273565',
+            publisher: 'Scribner',
+            description: 'A story of wealth, ambition, and lost love in the Roaring Twenties.',
+            image: "https://m.media-amazon.com/images/I/81TLiZrasVL.jpg"
+        },
+        {
+            id: 5,
+            title: 'Moby-Dick',
+            author: 'Herman Melville',
+            genre: 'Adventure',
+            availability: 'Borrowed',
+            borrowCount: 12,
+            isbn: '9780142437247',
+            publisher: 'Penguin Classics',
+            description: 'An epic tale of obsession and revenge on the high seas.',
+            image: "https://m.media-amazon.com/images/I/71K4OH9CqOL._UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 6,
+            title: 'The Catcher in the Rye',
+            author: 'J.D. Salinger',
+            genre: 'Fiction',
+            availability: 'Available',
+            borrowCount: 19,
+            isbn: '9780316769488',
+            publisher: 'Little, Brown and Company',
+            description: 'A novel about teenage rebellion and the challenges of growing up.',
+            image: "https://m.media-amazon.com/images/I/7108sdEUEGL.jpg"
+        },
+        {
+            id: 7,
+            title: 'Brave New World',
+            author: 'Aldous Huxley',
+            genre: 'Dystopian',
+            availability: 'Borrowed',
+            borrowCount: 17,
+            isbn: '9780060850524',
+            publisher: 'Harper Perennial',
+            description: 'A futuristic dystopian society where technological advancements control humanity.',
+            image: "https://m.media-amazon.com/images/I/81fiJzvcB2L._UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 8,
+            title: 'The Hobbit',
+            author: 'J.R.R. Tolkien',
+            genre: 'Fantasy',
+            availability: 'Available',
+            borrowCount: 30,
+            isbn: '9780345339683',
+            publisher: 'Del Rey',
+            description: 'A thrilling adventure of Bilbo Baggins on a quest for treasure and self-discovery.',
+            image: "https://m.media-amazon.com/images/I/81uEDUfKBZL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 9,
+            title: 'Crime and Punishment',
+            author: 'Fyodor Dostoevsky',
+            genre: 'Psychological Fiction',
+            availability: 'Available',
+            borrowCount: 14,
+            isbn: '9780486415871',
+            publisher: 'Dover Publications',
+            description: 'An intense novel exploring guilt, redemption, and moral dilemmas.',
+            image: "https://m.media-amazon.com/images/I/71O2XIytdqL.jpg"
+        },
+        {
+            id: 10,
+            title: 'The Lord of the Rings',
+            author: 'J.R.R. Tolkien',
+            genre: 'Fantasy',
+            availability: 'Borrowed',
+            borrowCount: 40,
+            isbn: '9780618640157',
+            publisher: 'Houghton Mifflin Harcourt',
+            description: 'An epic fantasy adventure in Middle-earth to destroy the One Ring.',
+            image: "https://m.media-amazon.com/images/I/81j4C6j3dRL.jpg"
+        },
+        {
+            id: 11,
+            title: 'Fahrenheit 451',
+            author: 'Ray Bradbury',
+            genre: 'Dystopian',
+            availability: 'Available',
+            borrowCount: 20,
+            isbn: '9781451673319',
+            publisher: 'Simon & Schuster',
+            description: 'A cautionary tale about censorship and the dangers of a society without books.',
+            image: "https://m.media-amazon.com/images/I/61zc4fPQbIL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 12,
+            title: 'War and Peace',
+            author: 'Leo Tolstoy',
+            genre: 'Historical Fiction',
+            availability: 'Borrowed',
+            borrowCount: 10,
+            isbn: '9780143039990',
+            publisher: 'Penguin Classics',
+            description: 'A sweeping novel that captures the impact of war on Russian society.',
+            image: "https://m.media-amazon.com/images/I/81W6BFaJJWL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 13,
+            title: 'Jane Eyre',
+            author: 'Charlotte Brontë',
+            genre: 'Romance',
+            availability: 'Available',
+            borrowCount: 16,
+            isbn: '9780141441146',
+            publisher: 'Penguin Classics',
+            description: 'A coming-of-age story about love, morality, and independence.',
+            image: "https://m.media-amazon.com/images/I/913R4srHS5L.jpg"
+        },
+        {
+            id: 14,
+            title: 'Wuthering Heights',
+            author: 'Emily Brontë',
+            genre: 'Gothic Fiction',
+            availability: 'Borrowed',
+            borrowCount: 13,
+            isbn: '9780141439556',
+            publisher: 'Penguin Classics',
+            description: 'A dark tale of passion, revenge, and supernatural elements on the Yorkshire moors.',
+            image: "https://m.media-amazon.com/images/I/81-jFO1dm8L._UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 15,
+            title: 'Dracula',
+            author: 'Bram Stoker',
+            genre: 'Horror',
+            availability: 'Available',
+            borrowCount: 21,
+            isbn: '9780486411095',
+            publisher: 'Dover Publications',
+            description: 'A gothic horror novel introducing the legendary Count Dracula.',
+            image: "https://m.media-amazon.com/images/I/713-Ct8swgL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 16,
+            title: 'The Picture of Dorian Gray',
+            author: 'Oscar Wilde',
+            genre: 'Philosophical Fiction',
+            availability: 'Available',
+            borrowCount: 15,
+            isbn: '9780141439570',
+            publisher: 'Penguin Classics',
+            description: 'A dark novel exploring vanity, morality, and corruption.',
+            image: "https://m.media-amazon.com/images/I/51vlaFE6XRL._UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 17,
+            title: 'Frankenstein',
+            author: 'Mary Shelley',
+            genre: 'Science Fiction',
+            availability: 'Borrowed',
+            borrowCount: 18,
+            isbn: '9780486282114',
+            publisher: 'Dover Publications',
+            description: 'A gothic novel about a scientist who creates life with unintended consequences.',
+            image: "https://m.media-amazon.com/images/I/81FzMSO3XnL._UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 18,
+            title: 'The Alchemist',
+            author: 'Paulo Coelho',
+            genre: 'Philosophical Fiction',
+            availability: 'Available',
+            borrowCount: 35,
+            isbn: '9780062315007',
+            publisher: 'HarperOne',
+            description: 'A novel about a young shepherd’s journey to fulfill his personal legend.',
+            image: "https://m.media-amazon.com/images/I/81FPzmB5fgL.jpg"
+        },
+        {
+            id: 19,
+            title: 'Don Quixote',
+            author: 'Miguel de Cervantes',
+            genre: 'Classic Fiction',
+            availability: 'Borrowed',
+            borrowCount: 9,
+            isbn: '9780060934347',
+            publisher: 'Harper Perennial',
+            description: 'A satirical novel about a nobleman’s adventures as a self-proclaimed knight.',
+            image: "https://m.media-amazon.com/images/I/71mbJoazlCL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            id: 20,
+            title: 'The Odyssey',
+            author: 'Homer',
+            genre: 'Epic Poetry',
+            availability: 'Available',
+            borrowCount: 12,
+            isbn: '9780140268867',
+            publisher: 'Penguin Classics',
+            description: 'An ancient Greek epic following Odysseus’ long journey home after the Trojan War.',
+            image: "https://m.media-amazon.com/images/I/81g0AATkO9L.jpg"
+        }
+    ];
+    
+
+export default Books
